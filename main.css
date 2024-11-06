@@ -23,11 +23,11 @@ header {
     padding: 0 15px;
 }
 
-.main-menu > ul >li {
+.main-menu > ul > li {
     display: inline-block;
 }
 
-header .main-wrapper{
+header .main-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,8 +42,28 @@ header .main-wrapper{
     margin-right: 15px;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+    position: relative;
 }
 
 .main-menu > ul > li:last-child > a {
     margin-right: 0;
+}
+
+.main-menu > ul > li > a::after {
+    content: '';
+    width: 10%;
+    height: 3px;
+    background: #00D5C3;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 25px;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.main-menu > ul > li > a:hover::after {
+    width: 100%;
+    opacity: 1;
 }
